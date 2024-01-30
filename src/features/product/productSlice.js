@@ -45,6 +45,7 @@ export const fetchCategoriesAsync = createAsyncThunk(
     const response = await fetchCategories();
     // The value we return becomes the `fulfilled` action payload
     return response.data;
+    
   }
 );
 
@@ -110,7 +111,7 @@ export const productSlice = createSlice({
   },
 });
 
-export const { increment } = productSlice.actions;
+// export const { increment } = productSlice.actions;
 
 export const selectAllProducts = (state) => state.product.products;
 export const selectTotalItems = (state) => state.product.totalItems;

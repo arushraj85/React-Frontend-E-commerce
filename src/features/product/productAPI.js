@@ -23,6 +23,7 @@ export function fetchCategories() {
     //TODO: we will not hard-code server URL here
     const response = await fetch('http://localhost:8080/categories/') 
     const data = await response.json()
+    // console.log(data)
     resolve({data})
   }
   );
@@ -48,7 +49,7 @@ export function fetchProductsByFilters(filter,sort,pagination) {
   for(let key in filter){
     const categoryValues = filter[key];
     if(categoryValues.length){
-      const lastCategoryValue = categoryValues[categoryValues.length-1]
+      const lastCategoryValue =  categoryValues[categoryValues.length-1]
       queryString += `${key}=${lastCategoryValue}&`
     }
   }

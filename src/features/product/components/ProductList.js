@@ -43,8 +43,6 @@ function classNames(...classes) {
 
 export default function ProductList() {
 
-  
-
   const dispatch = useDispatch();
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const products = useSelector(selectAllProducts);
@@ -53,6 +51,7 @@ export default function ProductList() {
   const brands = useSelector(selectBrands);
   // console.log(brands)
   const categories = useSelector(selectCategories);
+
   const filters = [
 
     {
@@ -63,7 +62,7 @@ export default function ProductList() {
     },
     {
       id: 'category',
-      name: 'Category',
+      name: 'Categories',
       options: categories
     },
       

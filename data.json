@@ -48,7 +48,9 @@
       "brand": "Samsung",
       "category": "smartphones",
       "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
-      "images": ["https://i.dummyjson.com/data/products/3/1.jpg"]
+      "images": [
+        "https://i.dummyjson.com/data/products/3/1.jpg"
+      ]
     },
     {
       "id": 4,
@@ -1426,7 +1428,9 @@
       "brand": "Fashion Jewellery",
       "category": "womens-jewellery",
       "thumbnail": "https://i.dummyjson.com/data/products/78/thumbnail.jpg",
-      "images": ["https://i.dummyjson.com/data/products/78/thumbnail.jpg"]
+      "images": [
+        "https://i.dummyjson.com/data/products/78/thumbnail.jpg"
+      ]
     },
     {
       "id": 79,
@@ -1439,7 +1443,9 @@
       "brand": "Fashion Jewellery",
       "category": "womens-jewellery",
       "thumbnail": "https://i.dummyjson.com/data/products/79/thumbnail.jpg",
-      "images": ["https://i.dummyjson.com/data/products/79/1.jpg"]
+      "images": [
+        "https://i.dummyjson.com/data/products/79/1.jpg"
+      ]
     },
     {
       "id": 80,
@@ -1834,9 +1840,7 @@
       ]
     }
   ],
-
-
-  "categories" : [
+  "categories": [
     {
       "value": "smartphones",
       "label": "smartphones",
@@ -1938,8 +1942,7 @@
       "checked": false
     }
   ],
-
-  "brands" : [
+  "brands": [
     {
       "value": "Apple",
       "label": "Apple",
@@ -2330,7 +2333,22 @@
       "label": "YIOSI",
       "checked": false
     }
+  ],
+  "users": [
+    {
+      "id": "e8dd",
+      "email": "surbhisuri18a@gmail.com",
+      "password": "Appleee@12"
+    },
+    {
+      "id": "4de4",
+      "email": "surbhisuri18aa@gmail.com",
+      "password": "Appleee@12"
+    },
+    {
+      "id": "beb3",
+      "email": "surbhisuri18a@gmail.com",
+      "password": "Appleee@12"
+    }
   ]
 }
-
-
