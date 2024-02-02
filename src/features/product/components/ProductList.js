@@ -68,6 +68,7 @@ export default function ProductList() {
       
     
   ];
+  
   const [filter, setFilter] = useState({});
   const [sort, setSort] = useState({});
   const [page,setPage] =useState(1)

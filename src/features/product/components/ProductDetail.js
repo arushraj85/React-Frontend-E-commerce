@@ -38,12 +38,13 @@ function classNames(...classes) {
 
 export default function ProductDetail() {
   const [selectedColor, setSelectedColor] = useState(colors[0])
-  const [selectedSize, setSelectedSize] = useState(sizes[2])
+  const [selectedSize, setSelectedSize] = useState(sizes[6])
   const product = useSelector(selectProductById)
 
   const dispatch = useDispatch()
 
   const params = useParams()
+  // console.log(params)
 
   useEffect(()=>{
     dispatch(fetchProductByIdAsync(params.id))
