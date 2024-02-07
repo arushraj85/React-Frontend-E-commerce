@@ -59,9 +59,12 @@ export const cartSlice = createSlice({
       })
       .addCase(addToCartAsync.fulfilled, (state, action) => {
         state.status = 'idle';
-        if(state.items.id===action.payload.id)
+        
+      let index= state.items.findIndex(item=>item.id===action.payload.id)
+      // console.log(index)
+      if(index>-1){
         return 
-      else
+      }
         state.items.push(action.payload);
       })
       .addCase(fetchItemsByUserIdAsync.pending, (state) => {
