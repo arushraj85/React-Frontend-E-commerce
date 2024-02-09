@@ -2459,56 +2459,13 @@
       ]
     }
   ],
-  "cart": [
-    {
-      "id": "58d4",
-      "title": "iPhone 9",
-      "description": "An apple mobile which is nothing like apple",
-      "price": 549,
-      "discountPercentage": 12.96,
-      "rating": 4.69,
-      "stock": 94,
-      "brand": "Apple",
-      "category": "smartphones",
-      "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/1/1.jpg",
-        "https://i.dummyjson.com/data/products/1/2.jpg",
-        "https://i.dummyjson.com/data/products/1/3.jpg",
-        "https://i.dummyjson.com/data/products/1/4.jpg",
-        "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-      ],
-      "quantity": 1,
-      "user": "e8dd"
-    },
-    {
-      "id": "dee8",
-      "title": "iPhone 9",
-      "description": "An apple mobile which is nothing like apple",
-      "price": 549,
-      "discountPercentage": 12.96,
-      "rating": 4.69,
-      "stock": 94,
-      "brand": "Apple",
-      "category": "smartphones",
-      "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/1/1.jpg",
-        "https://i.dummyjson.com/data/products/1/2.jpg",
-        "https://i.dummyjson.com/data/products/1/3.jpg",
-        "https://i.dummyjson.com/data/products/1/4.jpg",
-        "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-      ],
-      "quantity": 1,
-      "user": "e8dd"
-    }
-  ],
+  "cart": [],
   "orders": [
     {
-      "id": "dec5",
+      "id": "cf8d",
       "items": [
         {
-          "id": "58d4",
+          "id": "405f",
           "title": "iPhone 9",
           "description": "An apple mobile which is nothing like apple",
           "price": 549,
@@ -2529,7 +2486,7 @@
           "user": "e8dd"
         },
         {
-          "id": "dee8",
+          "id": "8a3b",
           "title": "iPhone 9",
           "description": "An apple mobile which is nothing like apple",
           "price": 549,
@@ -2578,34 +2535,22 @@
         ]
       },
       "paymentMethod": "cash",
-      "selectedAddress": null
+      "selectedAddress": {
+        "name": "Surbhi",
+        "email": "surbhisuri18a@gmail.com",
+        "phone": "09852266136",
+        "street": "Ward no 28,bari bazar munger, In front of Durga mandir",
+        "city": "Munger",
+        "state": "BIHAR",
+        "pincode": "811201"
+      },
+      "status": "pending"
     },
     {
-      "id": "542b",
+      "id": "5864",
       "items": [
         {
-          "id": "58d4",
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 549,
-          "discountPercentage": 12.96,
-          "rating": 4.69,
-          "stock": 94,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/1/1.jpg",
-            "https://i.dummyjson.com/data/products/1/2.jpg",
-            "https://i.dummyjson.com/data/products/1/3.jpg",
-            "https://i.dummyjson.com/data/products/1/4.jpg",
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": "e8dd"
-        },
-        {
-          "id": "dee8",
+          "id": "d9b2",
           "title": "iPhone 9",
           "description": "An apple mobile which is nothing like apple",
           "price": 549,
@@ -2626,8 +2571,8 @@
           "user": "e8dd"
         }
       ],
-      "totalItems": 2,
-      "totalAmount": 1098,
+      "totalItems": 1,
+      "totalAmount": 549,
       "user": {
         "id": "e8dd",
         "email": "surbhisuri18a@gmail.com",
@@ -2654,7 +2599,16 @@
         ]
       },
       "paymentMethod": "cash",
-      "selectedAddress": null
+      "selectedAddress": {
+        "name": "Surbhi",
+        "email": "surbhisuri18a@gmail.com",
+        "phone": "09852266136",
+        "street": "Ward no 28,bari bazar munger, In front of Durga mandir",
+        "city": "Munger",
+        "state": "BIHAR",
+        "pincode": "811201"
+      },
+      "status": "pending"
     }
   ]
 }

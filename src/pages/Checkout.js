@@ -13,7 +13,7 @@ import { Navigate } from "react-router-dom";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { selectLoggedInUser } from "../features/auth/authSlice";
 import { updateUserAysnc } from "../features/auth/authSlice";
-import { createOrderAsync } from "../features/order/orderSlice";
+import { createOrderAsync, selectCurrentOrder } from "../features/order/orderSlice";
 
 function Checkout() {
   const [selectedAddress, setSelectedAddress] = useState(null);
@@ -21,6 +21,8 @@ function Checkout() {
 
   const dispatch = useDispatch();
   const items = useSelector(selectItems);
+  const currentOrder= useSelector(selectCurrentOrder)
+  // console.log(currentOrder)
   // const [open, setOpen] = useState(true);
 
   const totalAmount = items.reduce(
@@ -57,13 +59,22 @@ function Checkout() {
   };
 
   const handleOrder = (e) => {
-    const order = {items,totalItems,totalAmount,user,paymentMethod,selectedAddress}
-    dispatch(createOrderAsync(order))
-  }
+    const order = {
+      items,
+      totalItems,
+      totalAmount,
+      user,
+      paymentMethod,
+      selectedAddress,
+      status : 'pending'
+    };
+    dispatch(createOrderAsync(order));
+  };
 
   return (
     <>
       {!items.length && <Navigate to="/" replace={true}></Navigate>}
+      {currentOrder && <Navigate to={`/order-success/${currentOrder.id}`} replace={true}></Navigate>}
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
@@ -311,7 +322,7 @@ function Checkout() {
                             onChange={handlePayment}
                             value="cash"
                             type="radio"
-                            checked={paymentMethod==='cash'}
+                            checked={paymentMethod === "cash"}
                             className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           />
                           <label
@@ -328,7 +339,7 @@ function Checkout() {
                             onChange={handlePayment}
                             value="card"
                             type="radio"
-                            checked={paymentMethod==='card'}
+                            checked={paymentMethod === "card"}
                             className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
                           />
                           <label
@@ -428,7 +439,7 @@ function Checkout() {
                 </p>
                 <div className="mt-6">
                   <div
-                   onClick={handleOrder}
+                    onClick={handleOrder}
                     className="flex cursor-pointer items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                   >
                     Order Now
