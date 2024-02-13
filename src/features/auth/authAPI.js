@@ -31,4 +31,10 @@ export function checkUser(loginInfo) {
   });
 }
 
+export function signOut(loginInfo) {
+  return new Promise(async (resolve) => {
+    //TODO : on server we will remove user session info also
+    resolve({ data :'success' });
+  });
+}
 
