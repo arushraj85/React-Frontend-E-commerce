@@ -11,9 +11,10 @@ import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Navigate } from "react-router-dom";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { selectLoggedInUser } from "../features/auth/authSlice";
+
 import { updateUserAysnc } from "../features/auth/authSlice";
 import { createOrderAsync, selectCurrentOrder } from "../features/order/orderSlice";
+import { selectUserInfo } from "../features/user/userSlice";
 
 function Checkout() {
   const [selectedAddress, setSelectedAddress] = useState(null);
@@ -45,8 +46,9 @@ function Checkout() {
     reset,
     formState: { errors },
   } = useForm();
-
-  const user = useSelector(selectLoggedInUser);
+ 
+  
+  const user = useSelector(selectUserInfo);
 
   const handleAddress = (e) => {
     setSelectedAddress(user.addresses[e.target.value]);
@@ -79,6 +81,7 @@ function Checkout() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
           <div className="lg:col-span-3">
+            {/* This form is for address */}
             <form
               className="bg-white px-5 py-12 mt-12"
               noValidate
